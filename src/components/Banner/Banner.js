@@ -3,6 +3,7 @@ import './Banner.css';
 import requests from '../../requests/Requests';
 import { useState, useEffect } from 'react';
 import axios from "../../requests/axios";
+import {BANNER_TEXT} from "../../constants/constants"
 
 function Banner() {
 
@@ -47,8 +48,8 @@ function Banner() {
                 }
                 </h1>
             <div className='banner_buttons'>
-                <button className='banner_button'>Play</button>
-                <button className='banner_button'>My list </button>
+                <button className='banner_button'>{BANNER_TEXT.PLAY}</button>
+                <button className='banner_button'>{BANNER_TEXT.MY_LIST} </button>
             </div>
             <h1 className='banner_description'>
                         {truncate(movie?.overview,100)}

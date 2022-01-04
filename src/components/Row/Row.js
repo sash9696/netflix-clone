@@ -14,14 +14,11 @@ function Row({title, fetchUrl, isLargeRow = false}) {
             
             const request = await axios.get(fetchUrl);
             
-            console.log("request", request);
-            console.log("request.data.results", request.data.results)
             setMovies(request.data.results);
             return request;
 
         }
        fetchData();
-       console.log("yugjhgjhg", movies);
 
     }, []);
     return (
